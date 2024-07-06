@@ -60,7 +60,7 @@ const AddNewButton = () => {
 
             if(resp){
               setDialog(false);
-              router.push(`/dashboard/interview/${resp.mockId}`);
+              router.push(`/dashboard/interview/${resp[0].mockId}`);
             }
 
             console.log("inserted ID:", resp);

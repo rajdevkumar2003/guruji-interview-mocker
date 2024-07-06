@@ -1,7 +1,5 @@
-//import { UserButton } from '@clerk/nextjs'
+
 import React from 'react'
-//import { Button } from '../../components/ui/button'
-import { Header } from './_components/Header'
 import AddNewButton from './_components/AddNewButton'
 
 const DashboardPage = () => {
