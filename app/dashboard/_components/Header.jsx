@@ -3,6 +3,7 @@ import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NavList } from "./NavList";
+import Link from "next/link";
 
 export const Header = () => {
   const path = usePathname();
@@ -14,28 +15,27 @@ export const Header = () => {
         <h2 className="text-primary">GURUJI</h2>
       </div>
       <ul className="hidden md:flex gap-6 items-center   text-gray-500  ">
-        <li
+        
+      <li
           className={`capitalize${
             path == "/dashboard" && " font-semibold text-primary"
           }`}
         >
-          About
+          <Link href={'/dashboard'}>Dashboard</Link>
         </li>
         <li
           className={`capitalize${
             path == "/about" && " font-semibold text-primary"
           }`}
-        >FAQ</li>
-        <li
-          className={`capitalize${
-            path == "/contact" && " font-semibold text-primary"
-          }`}
-        >Contact</li>
+        >
+          <Link href={'/about'}>About</Link>
+        </li>
+        
         <li
           className={`capitalize${
             path == "/help" && " font-semibold text-primary"
           }`}
-        >Help</li>
+        ><Link href={'/help'}>Help</Link></li>
       </ul>
       
       <UserButton />

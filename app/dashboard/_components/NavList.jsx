@@ -10,6 +10,7 @@ import {
   } from "@/components/ui/sheet"
 import { MenuIcon } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 
   
@@ -32,28 +33,26 @@ export const NavList=()=>{
       </SheetTitle>
       <SheetDescription>
       <ul className="hidden max-md:flex flex-col gap-6 mt-5 text-left text-[19px]  text-gray-500  ">
-        <li
+      <li
           className={`capitalize${
             path == "/dashboard" && " font-semibold text-primary"
           }`}
         >
-          About
+          <Link href={'/dashboard'}>Dashboard</Link>
         </li>
         <li
           className={`capitalize${
             path == "/about" && " font-semibold text-primary"
           }`}
-        >FAQ</li>
-        <li
-          className={`capitalize${
-            path == "/contact" && " font-semibold text-primary"
-          }`}
-        >Contact</li>
+        >
+          <Link href={'/about'}>About</Link>
+        </li>
+        
         <li
           className={`capitalize${
             path == "/help" && " font-semibold text-primary"
           }`}
-        >Help</li>
+        ><Link href={'/help'}>Help</Link></li>
       </ul>
       </SheetDescription>
     </SheetHeader>
